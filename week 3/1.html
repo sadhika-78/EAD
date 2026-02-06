@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Basics & Selectors</title>
+
+    <!-- Internal CSS -->
+    <style>
+        /* Element Selector */
+        h1 {
+            color: blue;
+        }
+
+        /* Class Selector */
+        .paraStyle {
+            background-color: lightyellow;
+            padding: 10px;
+        }
+
+        /* ID Selector */
+        #btnStyle {
+            font-size: 20px;
+            padding: 10px;
+        }
+    </style>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>Welcome to CSS Basics</h1>
+
+    <p class="paraStyle">
+        This paragraph is styled using a class selector.
+    </p>
+
+    <!-- Inline CSS -->
+    <button id="btnStyle" style="color: white; background-color: green;">
+        Click Me
+    </button>
+
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Arrow Function Programs</title>
+</head>
+<body>
+
+<h2>Array Operations Using Arrow Functions</h2>
+
+<input type="text" id="arrayInput" placeholder="Enter numbers separated by commas">
+<button onclick="showAverage()">Average</button>
+<button onclick="showPrimeNumbers()">Prime Numbers</button>
+<button onclick="showSecondLargest()">Second Largest</button>
+
+<p id="resultBox"></p>
+
+<script>
+
+const calculateAverage = (numberArray) => {
+
+    if (numberArray.length === 0) return 0;
+
+    let totalSum = numberArray.reduce((accumulator, currentValue) => {
+        return accumulator + currentValue;
+    }, 0);
+
+    return totalSum / numberArray.length;
+};
+
+const filterPrimes = (numberArray) => {
+
+    const isPrimeNumber = (num) => {
+
+        if (num < 2) return false;
+
+        for (let divisor = 2; divisor <= Math.sqrt(num); divisor++) {
+            if (num % divisor === 0) {
+                return false;
+            }
+        }
+
+        return true;
+    };
+
+    return numberArray.filter(value => isPrimeNumber(value));
+};
+
+const findSecondLargest = (numberArray) => {
+
+    let uniqueValues = [...new Set(numberArray)];
+
+    if (uniqueValues.length < 2) {
+        return "Not enough elements";
+    }
+
+    uniqueValues.sort((a, b) => b - a);
+
+    return uniqueValues[1];
+};
+
+function getInputArray() {
+
+    let rawInput = document.getElementById("arrayInput").value;
+
+    return rawInput.split(",")
+                   .map(value => parseFloat(value.trim()))
+                   .filter(value => !isNaN(value));
+}
+
+function showAverage() {
+
+    let numbers = getInputArray();
+
+    document.getElementById("resultBox").innerText =
+        "Average: " + calculateAverage(numbers);
+}
+
+function showPrimeNumbers() {
+
+    let numbers = getInputArray();
+
+    document.getElementById("resultBox").innerText =
+        "Prime Numbers: " + filterPrimes(numbers).join(", ");
+}
+
+function showSecondLargest() {
+
+    let numbers = getInputArray();
+
+    document.getElementById("resultBox").innerText =
+        "Second Largest: " + findSecondLargest(numbers);
+}
+
+</script>
+
+</body>
+</html>

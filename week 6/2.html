@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Student Registration Form</title>
+
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body class="bg-light">
+
+<div class="container mt-5">
+
+    <div class="card shadow p-4">
+    
+        <h2 class="text-center mb-4">Student Registration Form</h2>
+
+        <form>
+
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <label class="form-label">Student Name</label>
+                    <input type="text" class="form-control" placeholder="Enter your name">
+                </div>
+
+                <div class="col-md-6">
+                    <label class="form-label">Roll Number</label>
+                    <input type="text" class="form-control" placeholder="Enter roll number">
+                </div>
+            </div>
+
+
+            <div class="mb-3">
+                <label class="form-label">Email</label>
+                <input type="email" class="form-control" placeholder="Enter email">
+            </div>
+
+
+            <div class="mb-3">
+                <label class="form-label">Gender</label><br>
+
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="gender">
+                    <label class="form-check-label">Male</label>
+                </div>
+
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="gender">
+                    <label class="form-check-label">Female</label>
+                </div>
+
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="gender">
+                    <label class="form-check-label">Other</label>
+                </div>
+
+            </div>
+
+
+            <div class="mb-3">
+                <label class="form-label">Department</label>
+                <select class="form-select">
+                    <option selected>Select Department</option>
+                    <option>Computer Science</option>
+                    <option>Information Technology</option>
+                    <option>Electronics</option>
+                    <option>Mechanical</option>
+                    <option>Civil</option>
+                </select>
+            </div>
+
+
+            <div class="mb-3">
+                <label class="form-label">Subjects</label><br>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox">
+                    <label class="form-check-label">Data Structures</label>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox">
+                    <label class="form-check-label">Operating Systems</label>
+                </div>
+
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox">
+                    <label class="form-check-label">Database Management</label>
+                </div>
+
+            </div>
+
+
+            <div class="mb-3">
+                <label class="form-label">Upload Photo</label>
+                <input type="file" class="form-control">
+            </div>
+
+
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary me-2">Submit</button>
+                <button type="reset" class="btn btn-secondary">Reset</button>
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+</body>
+</html>
